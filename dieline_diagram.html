@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>刀版图展示</title>
+  <style>
+    body {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    svg {
+      border: 1px solid #ccc;
+    }
+    .outline {
+      fill: none;
+      stroke: black;
+      stroke-width: 1;
+    }
+    .dashed {
+      stroke-dasharray: 5,5;
+    }
+    .label {
+      font-size: 12px;
+      fill: black;
+    }
+  </style>
+</head>
+<body>
+<svg width="1200" height="1000" viewBox="0 0 1200 1000">
+  <!-- 正面 240x150 -->
+  <rect x="480" y="300" width="240" height="150" class="outline" />
+  <text x="600" y="295" class="label" text-anchor="middle">正面 240×150</text>
+
+  <!-- 撕口斜线 -->
+  <line x1="480" y1="420" x2="720" y2="360" class="outline dashed" />
+  <text x="600" y="445" class="label" text-anchor="middle">撕口线</text>
+
+  <!-- 背面 -->
+  <rect x="480" y="450" width="240" height="150" class="outline" />
+  <text x="600" y="620" class="label" text-anchor="middle">背面 240×150</text>
+
+  <!-- 上盖 -->
+  <rect x="480" y="150" width="240" height="150" class="outline" />
+  <text x="600" y="145" class="label" text-anchor="middle">上盖 240×150</text>
+
+  <!-- 左侧 -->
+  <rect x="240" y="300" width="240" height="150" class="outline" />
+  <text x="360" y="295" class="label" text-anchor="middle">左侧 160×150</text>
+
+  <!-- 右侧 -->
+  <rect x="720" y="300" width="240" height="150" class="outline" />
+  <text x="840" y="295" class="label" text-anchor="middle">右侧 160×150</text>
+
+  <!-- 底盖 -->
+  <rect x="480" y="600" width="240" height="150" class="outline" />
+  <text x="600" y="770" class="label" text-anchor="middle">底盖 240×150</text>
+
+  <!-- 胶边 -->
+  <polygon points="960,300 980,300 980,450 960,450" class="outline" />
+  <text x="970" y="295" class="label" text-anchor="middle">胶边</text>
+
+  <!-- 折边（上下） -->
+  <polygon points="480,150 480,120 720,120 720,150" class="outline" />
+  <polygon points="480,750 480,780 720,780 720,750" class="outline" />
+  <text x="600" y="115" class="label" text-anchor="middle">上折边</text>
+  <text x="600" y="795" class="label" text-anchor="middle">下折边</text>
+
+  <!-- 折边（左右） -->
+  <polygon points="240,300 210,300 210,450 240,450" class="outline" />
+  <polygon points="960,300 990,300 990,450 960,450" class="outline" />
+  <text x="210" y="295" class="label" text-anchor="middle">左折边</text>
+  <text x="990" y="295" class="label" text-anchor="middle">右折边</text>
+</svg>
+</body>
+</html>
